@@ -20,37 +20,37 @@
 x = [0, 0, 0, 1, 0, 1, 1, 1]
 y = [0, 0, 1, 0, 1, 1, 0, 1]
 z = [0, 1, 0, 0, 1, 0, 1, 1]
-disjunction_1 = []
-disjunction_2 = []
-inversion_1 = []
-inversion_x = []
-inversion_y = []
-inversion_z = []
-conjunction_1 = []
-conjunction_2 = []
 
-def disjunction(a, b, c):
-    for i in range(8):
+l = len(x)
+
+def disjunction(a, b):
+    c = []
+    for i in range(l):
         if a[i] == 1 or b[i] == 1:
             c.append(1)
         else:
             c.append(0)
+    return c
 
-def inversion(a, c):
-    for i in range(8):
-        c.append(-a[i])
+def inversion(a):
+    c = []
+    for i in range(l):
+        if a[i] == 1:
+            c.append(0)
+        elif a[i] == 0:
+            c.append(1)
+    return c
 
-def conjunction(a, b, c):
-    for i in range(8):
+def conjunction(a, b):
+    c = []
+    for i in range(l):
         if a[i] == 1 and b[i] == 1:
             c.append(1)
         else:
             c.append(0)
+    return c
 
-inversion(disjunction(disjunction(x, y, disjunction_1), z, disjunction_2), inversion_1)
-conjunction(conjunction(inversion(x, inversion_x), inversion(y, inversion_y), conjunction_1), inversion(z, inversion_z), conjunction_2)
-
-if conjunction_2 == inversion_1:
+if inversion(disjunction(disjunction(x, y), z)) == conjunction(conjunction(inversion(x), inversion(y)), inversion(z)):
     print('Yes')
 else:
     print('No')
