@@ -46,12 +46,12 @@ list_random = []
 for _ in range(user_number):
     list_random.append(random.randint(-user_number, user_number))
 print(list_random)
-sum = 0
+multiply = 1
 with open('file.txt', 'r') as data:
     for line in data:
-        sum += list_random[int(line)]
+        multiply *= list_random[int(line)]
         print(int(line), ':', list_random[int(line)])
-print('Сумма чисел под индексами из списка равна: ', sum)
+print('Произведение чисел под индексами из списка равно: ', multiply)
 
 # Реализуйте алгоритм перемешивания списка.
 
