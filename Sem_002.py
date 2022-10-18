@@ -40,13 +40,48 @@
 
 import random
 
-user_number = int(input('Введите число: '))
-list_of_numbers = []
-for i in range(user_number * 2 + 1):
-    list_of_numbers.append(-user_number)
-    user_number -= 1
-print(list_of_numbers)
-list_random = []
-for _ in range(-user_number):
-    list_random.append(random.choice(list_of_numbers))
-print(list_random)
+# user_number = int(input('Введите число: '))
+# list_random = []
+# for _ in range(user_number):
+#     list_random.append(random.randint(-user_number, user_number + 1))
+# print(list_random)
+# sum = 0
+# with open('file.txt', 'r') as data:
+#     for line in data:
+#         sum += list_random[int(line)]
+#         print(int(line), ':', list_random[int(line)])
+# print('Сумма чисел под индексами из списка равна: ', sum)
+
+# Реализуйте алгоритм перемешивания списка.
+
+# user_number = int(input('Введите число: '))
+# list_of_numbers = []
+# for _ in range(user_number * 2 + 1):
+#     list_of_numbers.append(-user_number)
+#     user_number -= 1
+# print(list_of_numbers)
+# for i in range(int(len(list_of_numbers) / 2 + 1)):
+#     temporary = list_of_numbers[i]
+#     list_of_numbers[i] = list_of_numbers[-i]
+#     list_of_numbers[-i] = temporary
+# temporary = list_of_numbers[0]
+# list_of_numbers.remove(list_of_numbers[0])
+# list_of_numbers.append(temporary)
+# print(list_of_numbers)
+
+# ДОП. задача на алгоритмы с реальных собеседований
+# Даны два массива:
+# [1, 2, 3, 2, 0] и [5, 1, 2, 7, 3, 2]
+# Надо вернуть их пересечение
+# [1, 2, 2, 3]
+# (порядок не важен)
+
+# first_list = [1, 2, 3, 2, 0]
+# second_list = [5, 1, 2, 7, 3, 2]
+# intersection = []
+# for i in first_list:
+#     for j in second_list:
+#         if j == i:
+#             intersection.append(j)
+#             break
+# print(intersection)
