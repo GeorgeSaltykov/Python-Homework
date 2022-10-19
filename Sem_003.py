@@ -33,5 +33,31 @@
 # минимальным значением дробной части элементов.
 # Пример:
 # - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
-user_list = (input().split())
-print(user_list)
+
+# user_list = (input().split())
+# without_points = []
+# list_of_fractions = []
+# for i in range(len(user_list)):
+#     without_points.append(user_list[i].split('.'))
+# for i in range(len(without_points)):
+#     if len(without_points[i]) > 1:
+#         list_of_fractions.append(float('0.' + without_points[i][1]))
+# print(list_of_fractions)
+# print(max(list_of_fractions) - min(list_of_fractions))
+
+# Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+# Пример:
+# - 45 -> 101101
+# - 3 -> 11
+# - 2 -> 10
+
+# user_number = int(input())
+# binary = []
+# while user_number > 1:
+#     binary.insert(0, user_number % 2)
+#     user_number = int(user_number / 2)
+# if user_number == 1:
+#     binary.insert(0, 1)
+# print(binary)
+
+
