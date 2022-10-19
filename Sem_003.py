@@ -17,6 +17,21 @@
 # - [2, 3, 4, 5, 6] => [12, 15, 16];
 # - [2, 3, 5, 6] => [12, 15]
 
-user_list = list(map(int, input().split()))
+# user_list = list(map(int, input().split()))
+# multiply_list = []
+# index = -1
+# l = len(user_list) // 2
+# if len(user_list) % 2 != 0:
+#     l += 1
+# for i in range(l):
+#     multiply_list.append(user_list[i] * user_list[index])
+#     index -= 1
+# print(multiply_list)
 
-
+# Задайте список из вещественных чисел.
+# Напишите программу, которая найдёт разницу между максимальным и
+# минимальным значением дробной части элементов.
+# Пример:
+# - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
+user_list = (input().split())
+print(user_list)
