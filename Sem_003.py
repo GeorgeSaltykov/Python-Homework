@@ -72,4 +72,3 @@ for _ in range(user_number):
     i = 1
     fibonacci.insert(0, -(fibonacci[i - 1] - fibonacci[i]))
 print(fibonacci)
-
