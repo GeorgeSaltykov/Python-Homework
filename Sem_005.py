@@ -94,6 +94,8 @@ while end == True:
         print('Игрок 1 победил')
         end = False
         stop = False
+    elif len(field_numbers) == 0:
+        end = False
     while end == True:
         if stop == False:
             stop = True
@@ -113,6 +115,8 @@ while end == True:
     or (dict[3] == '[O]' and dict[5] == '[O]' and dict[7] == '[O]') or (dict[1] == '[O]' and dict[4] == '[O]' and dict[7] == '[O]')
         or (dict[2] == '[O]' and dict[5] == '[O]' and dict[8] == '[O]') or (dict[3] == '[O]' and dict[6] == '[O]' and dict[9] == '[O]')):
         print('Игрок 2 победил')
+        end = False
+    elif len(field_numbers) == 0:
         end = False
 
 # Реализуйте RLE алгоритм: реализуйте модуль сжатия и восстановления данных.
