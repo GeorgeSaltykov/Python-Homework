@@ -54,13 +54,68 @@
 # Создайте программу для игры в ""Крестики-нолики"".
 
 print('Крестики-нолики! \n'
-      'Для того чтобы поставить крестик или нолик введите цифру нужного поля')
+      'Для того чтобы поставить крестик или нолик введите цифру нужного поля \n'
+      'Для завершения игры введите "0"')
 
-field = [[[1], [2], [3]], [[4], [5], [6]], [[7], [8], [9]]]
-for i in range(len(field)):
-    for j in range(len(field[i])):
-        print(field[i][j], end=' ')
+dict = {1: '[1]', 2: '[2]', 3: '[3]', 4: '[4]', 5: '[5]', 6: '[6]', 7: '[7]', 8: '[8]', 9: '[9]'}
+field_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+count = 1
+for i in range(3):
+    for j in range(3):
+        print(dict[count], end=' ')
+        count += 1
     print()
-while
-
-
+end = True
+stop = True
+while end == True:
+    while end == True:
+        if stop == False:
+            stop = True
+            break
+        first_player = int(input('Игрок 1 ходит: '))
+        if first_player in field_numbers:
+            dict[first_player] = '[X]'
+            field_numbers.remove(first_player)
+            count = 1
+            for i in range(3):
+                for j in range(3):
+                    print(dict[count], end=' ')
+                    count += 1
+                print()
+            break
+        else:
+            print('Вы ввели неподходящее число')
+            stop = False
+            break
+    if ((dict[1] == '[X]' and dict[2] == '[X]' and dict[3] == '[X]') or (dict[4] == '[X]' and dict[5] == '[X]' and dict[6] == '[X]')
+        or (dict[7] == '[X]' and dict[8] == '[X]' and dict[9] == '[X]') or (dict[1] == '[X]' and dict[5] == '[X]' and dict[9] == '[X]')
+        or (dict[3] == '[X]' and dict[5] == '[X]' and dict[7] == '[X]') or (dict[1] == '[X]' and dict[4] == '[X]' and dict[7] == '[X]')
+        or (dict[2] == '[X]' and dict[5] == '[X]' and dict[8] == '[X]') or (dict[3] == '[X]' and dict[6] == '[X]' and dict[9] == '[X]')):
+        print('Игрок 1 победил')
+        end = False
+        stop = False
+    while end == True:
+        if stop == False:
+            stop = True
+            break
+        second_player = int(input('Игрок 2 ходит: '))
+        if second_player in field_numbers:
+            dict[second_player] = '[O]'
+            field_numbers.remove(second_player)
+            count = 1
+            for i in range(3):
+                for j in range(3):
+                    print(dict[count], end=' ')
+                    count += 1
+                print()
+            break
+        else:
+            print('Вы ввели неподходящее число')
+            stop = False
+            break
+    if (dict[1] == ('[O]' and dict[2] == '[O]' and dict[3] == '[O]') or (dict[4] == '[O]' and dict[5] == '[O]' and dict[6] == '[O]')
+    or (dict[7] == '[O]' and dict[8] == '[O]' and dict[9] == '[O]') or (dict[1] == '[O]' and dict[5] == '[O]' and dict[9] == '[O]')
+    or (dict[3] == '[O]' and dict[5] == '[O]' and dict[7] == '[O]') or (dict[1] == '[O]' and dict[4] == '[O]' and dict[7] == '[O]')
+        or (dict[2] == '[O]' and dict[5] == '[O]' and dict[8] == '[O]') or (dict[3] == '[O]' and dict[6] == '[O]' and dict[9] == '[O]')):
+        print('Игрок 2 победил')
+        end = False
