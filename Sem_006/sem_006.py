@@ -41,8 +41,8 @@
 
 data = ['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА', 'токарь высшего разряда нИКОЛАй', 'директор аэлита']
 
-for position in data:
-    print('Привет', position.split()[-1].title(), '!')
+# for position in data:
+#     print('Привет', position.split()[-1].title(), '!')
 
 #  Создать список, содержащий цены на товары (10–20 товаров), например:
 # [57.8, 46.51, 97, ...]
@@ -56,3 +56,20 @@ for position in data:
 # Вывести цены пяти самых дорогих товаров. Сможете ли вывести цены этих товаров по возрастанию, написав минимум кода?
 
 price = [57.8, 46.51, 97, 102.32, 22.8, 44.20, 53.04, 88, 32.43, 76.25, 84.99, 16.05]
+price = list(map(str, price))
+separately = []
+result = []
+for i in range(len(price)):
+    separately.append(price[i].split('.'))
+for i in range(len(separately)):
+    if len(separately[i]) == 2:
+        if len(separately[i]) == 2 and len(separately[i][1]) == 2:
+            result.append(separately[i][0] + ' руб. ' + separately[i][1] + ' коп.')
+        else:
+            result.append(separately[i][0] + ' руб. ' + separately[i][1] + '0' + ' коп.')
+    if len(separately[i]) == 1:
+        result.append(separately[i][0] + ' руб. ' + '00 коп.')
+for i in range(len(result)):
+    if i + 1 < len(result):
+        print(result[i], end=', ')
+    else: print(result[i])
