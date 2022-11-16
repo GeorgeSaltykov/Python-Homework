@@ -10,28 +10,28 @@
 # Примечание: если обособление чисел кавычками не будет получаться - можете вернуться к его реализации позже.
 # Главное: дополнить числа до двух разрядов нулём!
 
-# data = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+5', 'градусов']
-# i = 0
-# for j in data:
-#     if i == len(data):
-#         i -= 1
-#     if len(data[i]) == 1:
-#         if data[i].isdigit():
-#             data[i] = '0' + data[i]
-#             data.insert(i, '"')
-#             data.insert(i + 2, '"')
-#     elif len(data[i]) == 2:
-#         if data[i].isdigit() and data[i][0] != '0':
-#             data.insert(i, '"')
-#             data.insert(i + 2, '"')
-#             i += 1
-#         elif not data[i][0].isdigit() and data[i][1].isdigit():
-#             data[i] = data[i][0] + '0' + data[i][1]
-#             data.insert(i, '"')
-#             data.insert(i + 2, '"')
-#     i += 1
-# result = ' '.join(data)
-# print(result)
+data = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+5', 'градусов']
+i = 0
+for j in data:
+    if i == len(data):
+        i -= 1
+    if len(data[i]) == 1:
+        if data[i].isdigit():
+            data[i] = '0' + data[i]
+            data.insert(i, '"')
+            data.insert(i + 2, '"')
+    elif len(data[i]) == 2:
+        if data[i].isdigit() and data[i][0] != '0':
+            data.insert(i, '"')
+            data.insert(i + 2, '"')
+            i += 1
+        elif not data[i][0].isdigit() and data[i][1].isdigit():
+            data[i] = data[i][0] + '0' + data[i][1]
+            data.insert(i, '"')
+            data.insert(i + 2, '"')
+    i += 1
+result = ' '.join(data)
+print(result)
 
 # Дан список, содержащий искажённые данные с должностями и именами сотрудников:
 # ['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА', 'токарь высшего разряда нИКОЛАй', 'директор аэлита']
@@ -41,8 +41,8 @@
 
 data = ['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА', 'токарь высшего разряда нИКОЛАй', 'директор аэлита']
 
-# for position in data:
-#     print('Привет', position.split()[-1].title(), '!')
+for position in data:
+    print('Привет', position.split()[-1].title(), '!')
 
 #  Создать список, содержащий цены на товары (10–20 товаров), например:
 # [57.8, 46.51, 97, ...]
