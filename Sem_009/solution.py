@@ -41,8 +41,8 @@ class TicTacToeBoard:
             return ''
 
     def make_move(self, row, col):
-        if self.field[row][col] == '-' and self.player is True:
-            self.field[row][col] = 'X'
+        if self.field[row - 1][col - 1] == '-' and self.player is True:
+            self.field[row - 1][col - 1] = 'X'
             if self.check_field('X') == 'X':
                 print('Победил игрок X')
             elif self.check_field('X') == 'D':
@@ -50,8 +50,8 @@ class TicTacToeBoard:
             else:
                 print('Продолжаем играть')
             self.player = False
-        elif self.field[row][col] == '-' and self.player is False:
-            self.field[row][col] = '0'
+        elif self.field[row - 1][col - 1] == '-' and self.player is False:
+            self.field[row - 1][col - 1] = '0'
             if self.check_field('0') == '0':
                 print('Победил игрок 0')
             elif self.check_field('0') == 'D':
