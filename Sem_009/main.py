@@ -1,0 +1,16 @@
+from solution import TicTacToeBoard
+
+board = TicTacToeBoard()
+board.get_field()
+board.make_move(0, 0)
+board.get_field()
+board.make_move(0, 0)
+board.get_field()
+board.make_move(0, 1)
+board.get_field()
+board.make_move(1, 0)
+board.make_move(1, 1)
+board.make_move(2, 0)
+board.make_move(1, 1)
+board.get_field()
+board.new_game()
