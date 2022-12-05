@@ -1,6 +1,6 @@
 from MinMaxAverage import *
 
-# примеры 1 задачи
+# пример 1
 
 # values = [1, 2, 4, 5]
 # mins = MinStat()
@@ -16,6 +16,8 @@ from MinMaxAverage import *
 # maxs = MaxStat()
 # average = AverageStat()
 # print(mins.result(), maxs.result(), average.result())
+
+# пример 2
 
 # values = [1, 0, 0]
 # mins = MinStat()
