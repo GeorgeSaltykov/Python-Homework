@@ -8,8 +8,7 @@ class MinStat:
     def result(self):
         if len(self.numbers) > 0:
             return min(self.numbers)
-        else:
-            return 'None'
+        return
 
 
 class MaxStat:
@@ -22,8 +21,7 @@ class MaxStat:
     def result(self):
         if len(self.numbers) > 0:
             return max(self.numbers)
-        else:
-            return 'None'
+        return
 
 
 class AverageStat:
@@ -41,5 +39,4 @@ class AverageStat:
                 average += i
                 count += 1
             return average / count
-        else:
-            return 'None'
+        return
